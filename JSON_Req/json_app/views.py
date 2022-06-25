@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt # Retira as restrições de
 # Comando para execução nem um terminal Bash
 # curl -X '<HTTP_METHOD>' -d '<JSON_BODY>' http://127.0.0.1:8000/alunos_<http_method>/ && printf '\n'
 
-# Objetos python se assemelham a um hashmap
+# Dicionários python se assemelham a um hashmap
 usuarios = {
     1:{'Nome': 'Guilherme', 'Email': 'Guilherme@gmail.com'},
     2:{'Nome': 'Caio', 'Email': 'Caio@gmail.com'},
@@ -15,7 +15,7 @@ usuarios = {
 
 
 # Create your views here.
-# curl -X 'GET' http://127.0.0.1:8000/alunos_get/ && printf '\n'
+# curl -X 'GET' http://127.0.0.1:8000/alunos_get/1 && printf '\n'
 # Retorna todos os usuários
 @csrf_exempt
 def alunos_get(request, id):
